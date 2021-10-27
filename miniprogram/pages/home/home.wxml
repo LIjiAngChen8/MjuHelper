@@ -1,0 +1,104 @@
+<view class="bar-box" style='height:{{navigationBarHeight}}'>
+  <view class="status-height" style='height:{{statusBarHeight}}'></view>
+  <view></view>
+</view>
+<!-- <view class="navigation-Height" style='height:{{navigationBarHeight}}'></view> -->
+<view class="navigation-Height" ></view>
+
+<view class="container" style="margin-top: -85rpx;">
+  <view class="function">
+    <view class="sousuo">
+      <image class="img" src="/images/icon/sousuo.png"></image>
+      <input type="text" placeholder="搜索" placeholder-style="color:#535353;"></input>
+    </view>
+    <view class="functiontitle">
+      <text>校园服务</text>
+    </view>
+    <view class="server">
+      <view wx:if="{{Mjuitem.sign==0}}" class="serverbox"  wx:for="{{Mjuserver}}" wx:for-index="Mjukey" wx:key="Mjukey"  wx:for-item="Mjuitem" bindtap="Mjuserver" data-index="{{Mjukey}}">
+        <image src="{{Mjuitem.iconurl}}"></image>
+        <text>{{Mjuitem.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="container">
+    <view class="time-box">
+      <view class="titlebox">
+        <view style="display: flex;align-items: flex-end;">
+          <view class="title">今日课程</view>
+          <view class="title1">/4节</view>
+        </view>
+        <view class="flexx">
+          <view class="title-a" style="margin-right:0rpx;">第{{week}}周</view>
+          <image style="height:40rpx;margin:0 30rpx 0 5rpx;" mode="heightFix" src="/images/left.png"></image>
+        </view>
+      </view>
+      <scroll-view class="timesrcolbox" scroll-x	 scroll-with-animation='true' bindtouchstart="handletouchtart" bindtouchmove="handletouchmove" bindtouchend='touchEnd'>
+          <view class="time-box-m">
+              <view  wx:for="{{timelist}}" wx:key="key"  wx:for-item="item">
+                <view class="center time-a" bindtap="clicktime" data-index="{{index}}">
+                  <view class="time-box-text">{{item[1]}}</view>
+                  <view class="{{index == timeindex  ? 'time-box-box-h' : 'time-box-box'}}">{{item[0]}}</view>
+                </view>  
+              </view>
+          </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="bookbox">
+  <scroll-view scroll-x="true"  scroll-with-animation='true'> 
+        <view class="bookscroll" scroll-x="true">
+            <view style="width:8%;height:230rpx;"></view> 
+            <view class="book_Item" wx:for="{{booklist}}" wx:key="bookkey"  wx:for-item="bookitme"> 
+              <view class="boxbook">
+                  <view class="cover-page">
+                      <image class="book" style="width: 150rpx;" mode="widthFix" src="{{bookitme.bookurl}}"></image>
+                  </view>
+                  <view class="inside-page"></view>
+                  <view class="inside-page"></view>
+                  <view class="inside-page"></view>
+                  <view class="inside-page"></view>
+                  <view class="bookpage">
+                      <text class="book-text1">{{bookitme.book}}</text>
+                      <text class="book-text2">{{bookitme.teacher}}</text>
+                      <text class="book-text3">{{bookitme.time}}节</text>
+                      <text class="book-text4">{{bookitme.address}}</text>
+                  </view>
+                  <view class="end-page">
+                    <image class="bookend" style="width: 150rpx;" mode="widthFix" src="{{bookitme.bookurl}}"></image>
+                  </view>
+              </view>
+            </view>
+        </view>  
+  </scroll-view> 
+</view>
+<view class="box">
+  <view class="title">推荐</view>
+  <scroll-view scroll-x="true"  scroll-with-animation='true'>
+    <view class="bookscroll" style="height:260rpx;" scroll-x="true">
+      <view class="tuijian">
+          <view ></view>
+          <view style="display: flex;align-items: center;justify-content: space-between;">
+            <image class="info" src="cloud://lijiangchen-6gcgn9nn7845c6fa.6c69-lijiangchen-6gcgn9nn7845c6fa-1258885867/info/1.jpg"></image>
+              <text>某某某</text>
+              <view class="user">
+                <image src="/images/icon/loveon.png"></image>
+                <text>532</text>
+              </view>
+          </view>
+      </view>
+      <view class="tuijian"></view>
+      <view class="tuijian"></view>
+      <view class="tuijian"></view>
+      <view class="tuijian"></view>
+    </view>
+  </scroll-view>
+</view> 
+<view class="container">
+  <swiper class="swiper" autoplay='true' interval='5000' circular='true' indicator-dots='ture' indicator-color='rgba(0,0,0,0.3)'indicator-active-color='red' >
+    <swiper-item wx:for="{{bannner}}">
+      <image src="{{item.url}}" style="width:100%;border-radius:20rpx;" mode="widthFix"/>
+    </swiper-item>
+  </swiper>
+</view> 

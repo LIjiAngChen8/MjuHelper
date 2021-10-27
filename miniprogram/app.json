@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/center/center",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "闽院小助手",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "color": "#555555",
+    "selectedColor": "#0000FF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/emj.png",
+        "selectedIconPath": "/images/emj.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "校园",
+        "iconPath": "/images/emj.png",
+        "selectedIconPath": "/images/emj.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/emj.png",
+        "selectedIconPath": "/images/emj.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

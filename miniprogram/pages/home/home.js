@@ -59,37 +59,37 @@ Page({
     ],
     booklist:[
       {
-        bookurl:"cloud://lijiangchen-6gcgn9nn7845c6fa.6c69-lijiangchen-6gcgn9nn7845c6fa-1258885867/book/cext3.jpg",
-        book:'叭叭叭把',
-        teacher:'哈哈哈',
-        time:'1-2',
-        address:'666666'
-      },
-      {
-        bookurl:"cloud://lijiangchen-6gcgn9nn7845c6fa.6c69-lijiangchen-6gcgn9nn7845c6fa-1258885867/book/cext2.png",
-        book:'算法分析与设计B(R)',
-        teacher:'吕岚',
+        bookurl:"cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/71647418009_.png",
+        book:'网络基础设计',
+        teacher:'户根勤',
         time:'3-4',
         address:'3A109'
       },
       {
-        bookurl:"cloud://lijiangchen-6gcgn9nn7845c6fa.6c69-lijiangchen-6gcgn9nn7845c6fa-1258885867/book/cext3.jpg",
-        book:'孤独是生命的礼物',
-        teacher:'肖剑飞',
+        bookurl:"cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/716474180019_.png",
+        book:'高等数学',
+        teacher:'某某某',
+        time:'1-2',
+        address:'666666'
+      },
+      {
+        bookurl:"cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/71647009_.png",
+        book:'我身体里的人造星星',
+        teacher:'[爱尔兰] 希内德·格利森',
         time:'5-6',
         address:'1A666'
       },
       {
-        bookurl:"cloud://lijiangchen-6gcgn9nn7845c6fa.6c69-lijiangchen-6gcgn9nn7845c6fa-1258885867/book/cext1.png",
-        book:'孤独是生命的礼物',
-        teacher:'肖剑飞',
+        bookurl:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/716474189_.png',
+        book:'测试',
+        teacher:'测试',
         time:'7-8',
         address:'实D206'
       },
       {
-        bookurl:"cloud://lijiangchen-6gcgn9nn7845c6fa.6c69-lijiangchen-6gcgn9nn7845c6fa-1258885867/book/cext1.png",
+        bookurl:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/1111.png',
         book:'孤独是生命的礼物',
-        teacher:'肖剑飞',
+        teacher:'测试',
         time:'7-8',
         address:'实D206'
       },
@@ -163,11 +163,61 @@ Page({
     ],
     bannner:[
       {
-        url:'cloud://lijiangchen-6gcgn9nn7845c6fa.6c69-lijiangchen-6gcgn9nn7845c6fa-1258885867/bannner/test1.png'
+        url:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/4cb9c1d3-0722-4f74-bf8e-8545987d8fc9.jpg'
       },
       {
-        url:'cloud://lijiangchen-6gcgn9nn7845c6fa.6c69-lijiangchen-6gcgn9nn7845c6fa-1258885867/bannner/test.png'
+        url:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/fa83b5dc-cf16-4050-9e2c-7de7401e7181.jpg'
       },
+    ],
+    recommend:[
+{
+  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/211647419727_.pic.jpg',
+  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/151647419123_.pic.jpg',
+  nickName:'Xiao晓',
+  like:false,
+  likeNumber:162,
+  text:'收到闽江学院录取通知书啦！'
+},
+{
+  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/221647419737_.pic.jpg',
+  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/141647419123_.pic.jpg',
+  nickName:'懒人LeE',
+  like:false,
+  likeNumber:555,
+  text:'食堂的饭！！'
+},
+{
+  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/201647419717_.pic.jpg',
+  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/181647419124_.pic_hd.jpg',
+  nickName:'Yoohoow',
+  like:false,
+  likeNumber:35012,
+  text:'福州地铁|纯欲☁️奶里奶气穿搭之宿舍对镜自拍'
+},
+{
+  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/191647419705_.pic.jpg',
+  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/161647419123_.pic.jpg',
+  nickName:'别烦我',
+  like:false,
+  likeNumber:9262,
+  text:'真的很绝！'
+},
+{
+  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/231647419955_.pic.jpg',
+  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/181647419124_.pic_hd.jpg',
+  nickName:'奶黄包',
+  like:false,
+  likeNumber:10005,
+  text:'真的很绝！'
+},
+{
+  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/231647419955_.pic.jpg',
+  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/121647418688_.pic.jpg',
+  nickName:'不知名网友',
+  like:false,
+  likeNumber:162,
+  text:'老师真好看！'
+},
     ],
     statusBarHeight: statusBarHeight + 'px',
     navigationBarHeight: navigationBarHeight + 'px',
@@ -262,57 +312,23 @@ Page({
         break;
     }
   },
+  //点击书本进入书本详情页
+  toBookDetails(e){
+    // console.log(e.currentTarget.dataset.course)
+    let book=e.currentTarget.dataset.course.book
+    let bookUrl=e.currentTarget.dataset.course.bookurl
+    wx.navigateTo({
+      url: '../course/details?book='+book+'&bookUrl='+bookUrl
+    })
+  },
+  //进入生活日常(daily)详情页
+  toDaily(){
+    wx.navigateTo({
+      url: '../discovery/daily/daily',
+    })
+  },
   onLoad: function (options) {
       this.changetime(0)
       console.log(this.data.timeindex)
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })

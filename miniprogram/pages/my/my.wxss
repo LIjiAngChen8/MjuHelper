@@ -1,1 +1,25 @@
 /* pages/my/my.wxss */
+@import '../../assets/icon/mju-icon.wxss';
+page{
+    background: linear-gradient(180deg, #ffffff, #eeeeee, #f5f5f5)
+}
+.results{
+    justify-content:space-evenly;
+    width: 90%;
+    margin: 15px auto 0 auto;
+}
+.resultsTop{
+    font-size: 40rpx;
+}
+.resultsBottom{
+    font-size: x-small;
+}
+.status-height{
+    background-color: rgba(245, 244, 244, 0.178);
+}
+.myIcon{
+    width: 90%;
+    margin: 0 auto;
+    color: black;
+    font-size: 28px;
+}

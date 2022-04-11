@@ -1,0 +1,45 @@
+/* pages/my/userDynamicModule/userDynamic.wxss */
+.myDynamic{
+    background-color: #fff;
+    width: 90%;
+    border-radius: 12%  12% 0 0;
+    padding: 5%;
+}
+.myDynamicTab{
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.mdt_item{
+    margin-right: 25px;
+}
+.myDynamics{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 20px
+}
+.dynamics-left{
+    width: 18%;
+    display: flex;
+    align-items:flex-end;
+}
+.day{
+    font-weight: 500;
+    line-height: 100%;
+    font-size: 30px;
+}
+.month{
+    line-height: 100%;
+    font-size: 12px;
+}
+.dynamics-right{
+    width: 80%;
+}
+.dynamics-right-text{
+    font-size: small;
+}
+.dynamics-right-image{
+    height: 100px;
+    border-radius: 12px;
+}

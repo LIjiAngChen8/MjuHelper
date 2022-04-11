@@ -1,0 +1,4 @@
+<view class="c-title">
+    <view class="title">{{title}}</view>
+    <slot class="title-slot" name="suffix"></slot>
+</view>

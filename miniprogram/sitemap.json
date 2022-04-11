@@ -1,7 +1,7 @@
 {
   "desc": "微信搜索词条索引：https://developers.weixin.qq.com/miniprogram/dev/framework/sitemap.html",
   "rules": [{
-    "action": "allow",
+    "action": "disallow",
     "page": "*"
   }]
 }

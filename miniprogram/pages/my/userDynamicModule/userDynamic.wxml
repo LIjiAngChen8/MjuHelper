@@ -1,0 +1,19 @@
+<!--pages/my/userDynamicModule/userDynamic.wxml-->
+<view class="myDynamic">
+    <view class="myDynamicTab">
+        <view class="mdt_item" wx:key="index" wx:for= "{{tabItem}}" >{{item.title}}</view >
+    </view>
+    <scroll-view scroll-y="true" show-scrollbar="false" :enhanced="true"  style="height: 500px;">
+        <!-- <view wx:for="dynamics"> -->
+        <view class="myDynamics" wx:for="{1,2,3,4,5,6,7}" wx:key="item">
+            <view class="dynamics-left">
+                <view class="day">15</view>
+                <view class="month">/11</view>
+            </view>
+            <view class="dynamics-right">
+            <view class="dynamics-right-text">OOTD｜在互联网上班日常穿搭</view>
+            <image class="dynamics-right-image" mode="heightFix" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/728bdcfa-6408-42eb-8c67-16a237ad9a34.jpeg"></image>
+            </view>
+        </view>
+    </scroll-view>
+</view>

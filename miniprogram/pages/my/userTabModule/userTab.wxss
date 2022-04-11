@@ -1,0 +1,24 @@
+/* pages/my/userTabModule/userTab.wxss */
+@import '../../../assets/icon/mju-icon.wxss';
+.tabBox{
+    width: 90%;
+    height: 160rpx;
+    background-color: rgb(255, 255, 255);
+    box-shadow:0 0 10px 10px #f1f1f1;
+    border-radius: 25px;
+    margin: 10px auto;
+    display: flex;
+    justify-content:space-evenly;
+}   
+.tabItem{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+}
+.tabItemIcon{
+    font-size: 30px;
+    color: #514ED5;
+    margin-bottom: 3px;
+}

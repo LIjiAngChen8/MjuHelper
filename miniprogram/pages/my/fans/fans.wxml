@@ -1,0 +1,20 @@
+<view class='topTabSwiper'>
+  <view class='tab{{navId == 0 ? " tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>关注</view>
+  <view class='tab{{navId == 1 ? " tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>粉丝</view>
+</view>
+<swiper current="{{navId}}" class='swiper' style="height:600px;" catchtouchmove="true" duration="300" bindchange="bindchange">
+  <swiper-item>
+    <view class="fansItem" wx:for="{{fansList}}" wx:key="item">
+      <image class="x-avatar" src="{{item.avatar}}"></image>
+      <view class="userInfo">
+        <text class="itemNickName">{{item.nickName}}</text>
+        <text class="itemIntroduce">{{item.college}}</text>
+        <text class="itemIntroduce ellipsis">{{item.introduce}}</text>
+      </view>
+      <view class="followed">{{item.fansState===0?'未关注':item.fansState===1?'已关注':'互相关注'}}</view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='swiper_con'>我是粉丝页面</view>
+  </swiper-item>
+</swiper>

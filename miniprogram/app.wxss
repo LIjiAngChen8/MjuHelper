@@ -1,4 +1,39 @@
 /**app.wxss**/
+@import '/assets/icon/mju-icon.wxss';
+.x-avatar{
+  height: 110rpx;
+  width: 110rpx;
+  border-radius: 50%;
+}
+.flex{
+  display: flex;
+}
+/* 横向对齐 */
+.centerX{
+  display: flex;
+  align-items: center;
+}
+/* 垂直对齐 */
+.centerY{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+/* 顶部状态栏 */
+.mjuNavigationBar{
+  /* background-color: rgb(255, 255, 255); */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.mjuContainerBar{
+display: flex;
+align-items: center;
+}
+
+/* 下面待修改 */
 .container {
   display: flex;
   flex-direction: column;
@@ -16,12 +51,12 @@
   height: 35rpx;
   border-radius: 50%;
 }
-.box{
-  width: 92%;
-  /* height: 150rpx; */
-  margin: 0 auto;
-  border-radius: 20rpx;
-  box-shadow: 0 0rpx 15rpx 0 rgba(78, 78, 78, 0.2);
+
+/* 文本超过长度 */
+.ellipsis{
+  text-overflow:ellipsis; 
+  white-space:nowrap; 
+  overflow:hidden; 
 }
 
 .title{
@@ -35,11 +70,6 @@
   border-radius: 50%;
   margin: 0 0 0 15rpx;
 }
-.flexx{
-  display: flex;
-  align-items: center;
-}
-
 button {
   background: initial;
 }
@@ -51,10 +81,8 @@ button:focus{
 button::after{
   border: none;
 }
-
-
 page {
-  background: #f6f6f6;
+  background: #f1f1f1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

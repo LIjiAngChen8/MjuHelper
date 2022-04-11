@@ -1,0 +1,20 @@
+<!--个人中心头部组件-->
+<view class="mineBox">
+    <view class="infoBox">
+        <image class="info" src="../../../images/1.jpg"></image>
+        <view class="info-right">
+            <text class="nickName">{{userInfo.nickName}}</text>
+            <view class="centerX">
+                <text class="font-s1">{{userInfo.college}}</text>
+                <image wx:if="{{college!='无认证'}}" class="check" mode="heightFix" src="../../../images/icon/my.png"></image>
+            </view>
+            <view>
+                <text class="mineBoxFont">{{userFans.like}}获赞</text>
+                <text class="mineBoxFont" bindtap="goToAttention">{{userFans.attention}}关注</text>
+                <text class="mineBoxFont" bindtap="goToFans">{{userFans.fans}}粉丝</text>
+            </view>
+        </view>
+        <view class="mjuicon icon-youjiantou"></view>
+    </view>
+    <view class="introduction">{{userInfo.introduction}}</view>
+</view>

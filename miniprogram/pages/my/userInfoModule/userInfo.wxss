@@ -1,0 +1,68 @@
+@import "../../../assets/icon/mju-icon.wxss";
+.font-s1{
+    font-size: 22rpx;
+    line-height: 24rpx;
+    color: rgb(124, 124, 124);
+} 
+.font-s2{
+    font-size: 25rpx;
+    color: rgb(124, 124, 124);
+}     
+.mineBox{
+    display:flex;
+    flex-flow: column;
+    width: 90%;
+    padding:15px 5%;
+    border-radius: 30rpx;
+    box-shadow:0 10 10px 10px #f1f1f1;
+    background-color: #fff;
+}
+.infoBox{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.info-right{
+    width: 70%;
+    margin-left: 10px;
+}
+.nickName{
+    /* font-size: 18px; */
+    font-weight: bold;
+}
+
+.info{
+    height: 130rpx;
+    width: 130rpx;
+    border-radius: 50%;
+    box-shadow:0 0 10rpx 1rpx #e4e4e4;
+}
+.check{
+    height: 35rpx;
+}
+.mineBoxFont{
+    font-size: 26rpx;
+    color: rgb(124, 124, 124);
+    margin-right:15rpx;
+}
+.introduction {
+    position: relative;
+    font-size: small;
+    margin-top: 10px;
+    padding: 5px;
+    color: rgb(49, 49, 49);
+    border-radius: 5px;
+    background-color: #f3f6ff;
+    white-space:pre-wrap
+}
+  .introduction::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    transform: rotate(45deg);
+    top: -6px;
+    left: 6%;
+    background: #f3f6ff;
+  }

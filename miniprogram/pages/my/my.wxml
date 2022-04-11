@@ -1,2 +1,19 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<!--个人中心-->
+<view class="mjuNavigationBar" style='height:{{navigationBarHeight}}'>
+  <view style='height:{{statusBarHeight}};background-color: white;'></view>
+  <view class="mjuContainerBar" style="height:{{containerHeight}};">
+    <view class="mjuicon icon-saoyisao myIcon" bindtap="getScancode"></view>
+  </view>
+</view>
+<view style='height:{{navigationBarHeight}};width: 100%;background-color: white;'></view>
+
+<mjuUserInfo nickName='{{userInfo.nickName}}' userFans="{{userFans}}" college='{{userInfo.college}}'>
+</mjuUserInfo>
+<view class="results flex">
+  <view class="centerY" wx:for="{{results}}" wx:key="item">
+    <view class="resultsTop">{{item.value}}</view>
+    <view class="resultsBottom">{{item.title}}</view>
+  </view>
+</view>
+<mjuUserTab></mjuUserTab>
+<mjuUserDynamic></mjuUserDynamic>

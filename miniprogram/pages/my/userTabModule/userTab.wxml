@@ -1,0 +1,23 @@
+<!--pages/my/userTabModule/userTab.wxml-->
+<view class="tabBox">
+    <view class="tabItem">
+        <view class="mjuicon icon-xiaoxizhongxin tabItemIcon"></view>
+        <text>消息</text>
+    </view>
+    <view class="tabItem">
+        <view class="mjuicon icon-wendang tabItemIcon"></view>
+        <text>资源</text>
+    </view>
+    <view class="tabItem">
+        <view class="mjuicon icon-huodong tabItemIcon"></view>
+        <text>二手</text>
+    </view>
+    <view class="tabItem">
+        <view class="mjuicon icon-shezhi tabItemIcon"></view>
+        <text>设置</text>
+    </view>
+    <view class="tabItem">
+        <view class="mjuicon icon-bangzhuyufankui tabItemIcon"></view>
+        <text>反馈</text>
+    </view>
+</view>

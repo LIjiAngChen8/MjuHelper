@@ -11,7 +11,6 @@ function LJCgetweek(){
   let minute = time.getMinutes() //分
   let second = time.getSeconds() //秒
   let Mday= new Date(year, month, 0).getDate()
-
 }
 //暴露出去
 module.exports = {

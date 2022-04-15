@@ -20,14 +20,16 @@
         <view class="tb-name">赵老师</view>
         </view>
     </view>
-    <MjuTitle title="评论区">
-        <view class="comments-tab" slot="suffix">
-            <view class='tab-item {{tabIndex == 0 ? "active" : ""}}' bindtap="changeTab" data-index="0">最热</view>
-            <view class="divLine" style="height: 25rpx;"></view>
-            <view class='tab-item {{tabIndex == 1 ? "active" : ""}}' bindtap="changeTab" data-index="1">最新</view>
-            <view class="divLine" style="height: 25rpx;"></view>
-            <view class='tab-item {{tabIndex == 3 ? "active" : ""}}' bindtap="changeTab" data-index="3">资源</view>
-        </view>
-    </MjuTitle>
-    <MjuComments commentList="{{commentList}}"></MjuComments>
+    <view class="affix">
+      <MjuTitle title="评论区">
+          <view class="comments-tab" slot="suffix">
+              <view class='tab-item {{tabIndex == 0 ? "active" : ""}}' bindtap="changeTab" data-index="0">最热</view>
+              <view class="divLine" style="height: 25rpx;"></view>
+              <view class='tab-item {{tabIndex == 1 ? "active" : ""}}' bindtap="changeTab" data-index="1">最新</view>
+              <view class="divLine" style="height: 25rpx;"></view>
+              <view class='tab-item {{tabIndex == 3 ? "active" : ""}}' bindtap="changeTab" data-index="3">资源</view>
+          </view>
+      </MjuTitle>
+    </view>
+    <MjuComments commentList="{{commentList}}" bind:getCommment="getCommment"></MjuComments>
 </view>

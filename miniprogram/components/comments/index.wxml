@@ -26,4 +26,23 @@
     </view>
     <view class="more-replies" wx:if="{{item.children.length>1}}" bindtap="showMore">展开{{item.children.length-1}}条回复</view>
 </view>
+<view class="c-footer"></view>
+<view class="comment-input" style="bottom:{{bottom + 'px'}}{{bottom !==0?';padding-bottom:10px':''}};transition: all .6 ease">
+  <view class="input-box{{inputKey?' show':''}}">
+    <input class="c-input"
+      type="text" 
+      confirm-type="发送"
+      focus="{{focus}}"
+      adjust-position="{{false}}"
+      placeholder-class="input-place"
+      placeholder="{{tips}}"
+      bindfocus="focus"
+      bindconfirm="sendComment"
+      bindblur="blur"
+      bindtap="focus1"
+      bindinput="getInput" value="{{inputKey}}"/>
+      <view class="mjuicon icon-smile emoji"/>
+  </view>
+  <view wx:if="{{inputKey}}" class="mjuicon icon-shangxiang send" bindtap="sendComment"/>
+</view>
 <wxs module="util" src="../../util/index.wxs"></wxs>

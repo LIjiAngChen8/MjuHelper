@@ -5,6 +5,7 @@
     width: 90%;
     padding: 30rpx 0 20rpx 0;
     margin: 0 auto;
+    background-color: #fff;
 }
 .title{
     font-weight:500;

@@ -98,67 +98,67 @@ Page({
       {
         sign:0,
         title:'成绩',
-        iconurl:'/images/icon/cj.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/4eb3360a-0196-43df-ab06-dd5e9991ddc3.png'
       },
       {
         sign:0,
         title:'视频解析',
-        iconurl:'/images/icon/video.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/ef1f37d8-d067-4b41-bd09-43a24c33e7a3.png'
       },
       {
         sign:0,
         title:'课程表',
-        iconurl:'/images/icon/date.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/f12d6223-067b-458d-b612-59a1af856618.png'
       },
       {
         sign:0,
         title:'红包',
-        iconurl:'/images/icon/waimai.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/c831d2b8-04c8-49c1-820d-a72d446e0894.png'
       },
       {
         sign:0,
         title:'更多',
-        iconurl:'/images/icon/more.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/49a0be2a-fc5d-4780-b6ad-a5f326913afc.png'
       },
       {
         sign:1,
         title:'后勤',
-        iconurl:'/images/icon/hq.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/129218ae-4291-45bd-b935-b34270b9891b.png'
       },
       {
         sign:1,
         title:'校历',
-        iconurl:'/images/icon/XL.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/e28f5362-f07c-4e0c-87c4-bb3533c38333.png'
       },
       {
         sign:1,
         title:'图书馆',
-        iconurl:'/images/icon/library.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/28630469-d24b-4459-b5d8-987019aa71fe.png'
       },
       {
         sign:1,
         title:'座位预定',
-        iconurl:'/images/icon/desk.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/cf0fd5b3-fde8-4211-9cc0-c7b732fb94ab.png'
       },
       {
         sign:1,
         title:'校友会',
-        iconurl:'/images/icon/xyh.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/f3fee074-ec8c-4ff3-985e-d45a0a7f0f23.png'
       },
       {
         sign:1,
         title:'考试安排',
-        iconurl:'/images/icon/ks.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/0651b86e-13d6-4af1-88be-100bd5bdf5b0.png'
       },
       {
         sign:1,
         title:'第二课堂',
-        iconurl:'/images/icon/date.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/f12d6223-067b-458d-b612-59a1af856618.png'
       },
       {
         sign:1,
         title:'第三课堂',
-        iconurl:'/images/icon/date.png'
+        iconurl:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/f12d6223-067b-458d-b612-59a1af856618.png'
       },
     ],
     bannner:[

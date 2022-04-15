@@ -1,13 +1,11 @@
 {
     "pages": [
-        
+        "pages/course/details",
         "pages/home/home",
         "pages/my/my",
         "pages/discovery/discovery",
-        "pages/course/details",
         "pages/my/fans/fans",
         "pages/discovery/daily/daily"
-        
     ],
     "window": {
         "backgroundColor": "#ffffff",
@@ -42,6 +40,7 @@
             }
         ]
     },
+    "lazyCodeLoading": "requiredComponents",
     "sitemapLocation": "sitemap.json",
     "style": "v2"
 }

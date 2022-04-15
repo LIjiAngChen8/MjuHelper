@@ -1,0 +1,29 @@
+<view class="comments" wx:for="{{commentList}}" wx:key="commentId">
+    <view class="comment-info" bindtap="comment" data-item="{{item}}" data-index="{{index}}"> 
+        <image class="user-avatar" src="{{item.avatar}}" catchtap="goToUser" data-name="{{item.nickName}}"></image>
+        <view class="user-info" catchtap="goToUser" data-name="{{item.nickName}}">
+            <view class="user-name">{{item.nickName}}</view>
+            <view class="publish-time">{{util.formatTime(item.time)}}</view>
+        </view>
+    </view>
+    <view class="content" bindtap="comment" data-item="{{item}}">{{item.content}}</view>
+    <view class="replies" wx:for="{{item.children}}" wx:key="children" wx:for-index="cindex">
+        <view class="comment-info"  bindtap="comment"
+            data-item="{{item}}"
+            data-index="{{index}}"
+            data-cindex="{{cindex}}"> 
+            <image class="replies-avatar" src="{{item.avatar}}"  catchtap="goToUser" data-name="{{item.nickName}}"></image>
+            <view class="user-info send-to"  catchtap="goToUser" data-name="{{item.nickName}}">
+                <view class="user-name">{{item.nickName}}</view>
+                <view class="mjuicon icon-huifu user-name" wx:if="{{ item.sendTo}}"></view>
+                <view class="user-name">{{item.sendTo.nickName}}</view>
+            </view>
+        </view>
+        <view class="replies-content" bindtap="comment" data-item="{{item}}">
+            <view class="content">{{item.content}}</view>
+            <view class="replies-time">{{item.time}}</view>
+        </view>
+    </view>
+    <view class="more-replies" wx:if="{{item.children.length>1}}" bindtap="showMore">展开{{item.children.length-1}}条回复</view>
+</view>
+<wxs module="util" src="../../util/index.wxs"></wxs>

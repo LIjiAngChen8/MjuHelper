@@ -6,7 +6,7 @@
 <!-- 校园服务 -->
 <view class="navbar">
   <view class="search">
-    <image class="img" src="/images/icon/sousuo.png"></image>
+    <image class="img" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/b1bbaf31-c688-4854-9793-7ec263cc7557.png"></image>
     <input type="text" placeholder="搜索" placeholder-style="color:#535353;"></input>
   </view>
   <title>校园服务</title>
@@ -26,7 +26,7 @@
     </view>
     <view class="today-title-right">
       <p>第{{week}}周</p>
-      <image mode="heightFix" src="/images/left.png"></image>
+      <view class="mjuicon icon-youjiantou"></view>
     </view>
   </view>
   <scroll-view class="timesrcolbox" scroll-x scroll-with-animation='true' bindtouchstart="handletouchtart" bindtouchmove="handletouchmove" bindtouchend='touchEnd'>
@@ -71,7 +71,7 @@
       <view class="userinfo">
         <image src="{{item.avatar}}" alt="" class="user-avatar" mode="heightFix"/>
         <text class="user-name ellipsis">{{item.nickName}}</text>
-        <image class="likeimg" src="../../images/icon/love.png" mode="heightFix"/>
+        <image class="likeimg" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/af39d285-c4b5-4a80-98b6-326545621317.png" mode="heightFix"/>
         <text class="likeNum ellipsis">{{ljc.ChangeLikeNum(item.likeNumber)}}</text>
       </view>
     </view>

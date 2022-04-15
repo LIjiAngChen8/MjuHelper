@@ -1,12 +1,12 @@
 <!--个人中心头部组件-->
 <view class="mineBox">
     <view class="infoBox">
-        <image class="info" src="../../../images/1.jpg"></image>
+        <image class="info" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/bbb61219-6434-421d-885f-156c85e5ada5.jpg"></image>
         <view class="info-right">
             <text class="nickName">{{userInfo.nickName}}</text>
             <view class="centerX">
                 <text class="font-s1">{{userInfo.college}}</text>
-                <image wx:if="{{college!='无认证'}}" class="check" mode="heightFix" src="../../../images/icon/my.png"></image>
+                <image wx:if="{{college!='无认证'}}" class="check" mode="heightFix" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/c2753cc3-5ab7-4994-8dc1-2facd2c5108e.png"></image>
             </view>
             <view>
                 <text class="mineBoxFont">{{userFans.like}}获赞</text>

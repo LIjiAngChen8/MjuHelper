@@ -1,0 +1,45 @@
+module.exports = {
+  /**
+   * 时间转换
+   * @param {any} 服务器时间:2022-01-14T17:02:26.000Z
+   * @returns {any} 返回格式时间
+   */
+  formatTime: function (date) {
+    var timePublish = getDate(date);
+    var timeNow = getDate();
+
+    var year = timePublish.getFullYear();
+    var month = timePublish.getMonth() + 1;
+    var day = timePublish.getDate();
+    var hour = timePublish.getHours();
+    var minute = timePublish.getMinutes();
+
+    month = month < 10 ? "0" + month : month;
+    day = day < 10 ? "0" + day : day;
+    hour = hour < 10 ? "0" + hour : hour;
+    minute = minute < 10 ? "0" + minute : minute;
+
+    var diffValue = timeNow - timePublish;
+    var diffDay = diffValue / (3600000 * 24);
+    var diffHour = diffValue / 3600000;
+    var diffMinute = diffValue / 60000;
+    if (diffValue < 0) {
+      result = "Error";
+    } else if (month > timeNow.getMonth() + 1) {
+      result = year + "-" + month + "-" + day;
+    } else if (diffDay > 4) {
+      result = month + "-" + day;
+    } else if (diffDay > 1) {
+      result = parseInt(diffDay) + "天前";
+    } else if (day !== timeNow.getDate()) {
+      result = "昨天 " + hour + ":" + minute;
+    } else if (diffHour > 1) {
+      result = parseInt(diffHour) + "小时前";
+    } else if (diffMinute > 1) {
+      result = parseInt(diffMinute) + "分钟前";
+    } else {
+      result = "刚刚";
+    }
+    return result;
+  },
+};

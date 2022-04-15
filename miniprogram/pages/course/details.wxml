@@ -29,4 +29,5 @@
             <view class='tab-item {{tabIndex == 3 ? "active" : ""}}' bindtap="changeTab" data-index="3">资源</view>
         </view>
     </MjuTitle>
+    <MjuComments commentList="{{commentList}}"></MjuComments>
 </view>

@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-        "MjuTitle": "/components/title/index" 
+        "MjuTitle": "/components/title/index",
+        "MjuComments":"/components/comments/index"
     }
 }

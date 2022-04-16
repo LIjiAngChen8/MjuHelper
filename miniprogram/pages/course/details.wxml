@@ -1,25 +1,23 @@
 <view>
     <view class="details">
-        <image src="{{details.bookCover}}" class="book-cover" mode="heightFix"/>
+        <image src="{{courseInfo.cover}}" class="book-cover" mode="heightFix"/>
         <view class="details-right">
-            <view class="book-name">{{details.bookName}}</view>
-            <view class="author">同济大学出版社 [著]</view>
-            <view class="describe">高等数学是由17世纪后微积分学，较深入的代数学、几何学以及它们之间的交叉内容所形成的一门基础学科。</view>
+            <view class="book-name">{{courseInfo.courseName}}</view>
+            <view class="author">{{courseInfo.press}}</view>
+            <view class="describe">{{courseInfo.introduction}}</view>
         </view>
     </view>
     <MjuTitle title="学期教师">
         <view slot="suffix">..</view>
     </MjuTitle>
-    <view class="teacher">
-        <view class="teacher-box">
-            <image class="teacher-img" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/071e3b3f-9fd8-4297-807d-cec3022f5975.jpg"></image>
-            <view class="tb-name">罗翔</view>
-        </view>
-        <view class="teacher-box">
-        <image class="teacher-img" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/8c79e106-fc3c-4e08-8bfa-66ffb868f663.jpg"></image>
-        <view class="tb-name">赵老师</view>
-        </view>
-    </view>
+    <scroll-view scroll-x style='display: flex;white-space:nowrap;height:75px;'enable-flex="true" >
+      <view class="teacher">
+          <view class="teacher-box" wx:for="{{teacherList}}" wx:key="index">
+              <image class="teacher-img" src="{{item.avatar}}"></image>
+              <view class="tb-name">{{item.name}}</view>
+          </view>
+      </view>
+    </scroll-view>
     <view class="affix">
       <MjuTitle title="评论区">
           <view class="comments-tab" slot="suffix">

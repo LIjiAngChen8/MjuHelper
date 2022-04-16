@@ -6,7 +6,15 @@ Component({
   properties: {
     commentList: Array,
   },
+  observers: {
+    'commentList': function (val) {
+      this.setData({
+        copyList:val
+      })
+    }
+  },
   data: {
+    copyList:[],
     inputKey: "",
     bottom: 0,
     copyBottom: 0,
@@ -26,10 +34,10 @@ Component({
             from: "636050766258033305ba63891ef8a0d6",
           },
           success: (res) => {
-            this.triggerEvent('getCommment', {id: id});
-            this.dataset({
+            this.setData({
               inputKey:''
             })
+            this.triggerEvent('getCommment', {id: id});
           }
         });
       }
@@ -66,16 +74,9 @@ Component({
         });
       }
     },
-    focus1() {
-      this.setData({
-        bottom: this.data.copyBottom,
-      });
-    },
-    blur() {
-      this.setData({
-        bottom: 0,
-        tips: "有爱评论，说点好听的～",
-      });
-    },
+    //获得焦点
+    focus1() {this.setData({bottom: this.data.copyBottom,})},
+    //失去焦点收起软键盘
+    blur() {this.setData({bottom: 0,tips: "有爱评论，说点好听的～",})},
   },
 });

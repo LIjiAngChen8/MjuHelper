@@ -59,6 +59,7 @@ Page({
     ],
     booklist:[
       {
+        courseID:'course00002',
         bookurl:"cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/71647418009_.png",
         book:'网络基础设计',
         teacher:'户根勤',
@@ -66,6 +67,7 @@ Page({
         address:'3A109'
       },
       {
+        courseID:'course00001',
         bookurl:"cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/716474180019_.png",
         book:'高等数学',
         teacher:'某某某',
@@ -73,6 +75,7 @@ Page({
         address:'666666'
       },
       {
+        courseID:'course00001',
         bookurl:"cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/71647009_.png",
         book:'我身体里的人造星星',
         teacher:'[爱尔兰] 希内德·格利森',
@@ -80,6 +83,7 @@ Page({
         address:'1A666'
       },
       {
+        courseID:'course00002',
         bookurl:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/716474189_.png',
         book:'测试',
         teacher:'测试',
@@ -87,6 +91,7 @@ Page({
         address:'实D206'
       },
       {
+        courseID:'course00001',
         bookurl:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/book/1111.png',
         book:'孤独是生命的礼物',
         teacher:'测试',
@@ -314,11 +319,9 @@ Page({
   },
   //点击书本进入书本详情页
   toBookDetails(e){
-    // console.log(e.currentTarget.dataset.course)
-    let book=e.currentTarget.dataset.course.book
-    let bookUrl=e.currentTarget.dataset.course.bookurl
+    let courseID=e.currentTarget.dataset.course.courseID
     wx.navigateTo({
-      url: '../course/details?book='+book+'&bookUrl='+bookUrl
+      url: '../course/details?courseID='+courseID
     })
   },
   //进入生活日常(daily)详情页

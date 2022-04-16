@@ -8,6 +8,9 @@ exports.main = async (event, context) => {
   return db
     .collection("comments")
     .aggregate()
+    .match({
+      course: event.course,
+    })
     .lookup({
       from: "user",
       localField: "from",
@@ -20,8 +23,11 @@ exports.main = async (event, context) => {
     .project({
       userInfo: 0,
     })
-    .match({
-      course: event.course,
+    .lookup({
+      from: 'replies',
+      localField: '_id',
+      foreignField: 'reply',
+      as: 'children',
     })
     .end({
       success: function (res) {

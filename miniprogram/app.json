@@ -1,46 +1,46 @@
 {
-    "pages": [
-        "pages/home/home",
-        "pages/my/my",
-        "pages/course/details",
-        "pages/discovery/discovery",
-        "pages/my/fans/fans",
-        "pages/discovery/daily/daily"
-    ],
-    "window": {
-        "backgroundColor": "#ffffff",
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#ffffff",
-        "navigationBarTitleText": "校园助手开发版",
-        "navigationBarTextStyle": "black"
-    },
-    "tabBar": {
-        "backgroundColor": "#ffffff",
-        "borderStyle": "black",
-        "color": "#555555",
-        "selectedColor": "#0000FF",
-        "list": [
-            {
-                "pagePath": "pages/home/home",
-                "text": "首页",
-                "iconPath": "/images/home-1.png",
-                "selectedIconPath": "/images/home.png"
-            },
-            {
-                "pagePath": "pages/discovery/discovery",
-                "text": "社区",
-                "iconPath": "/images/zhuye1.png",
-                "selectedIconPath": "/images/zhuye.png"
-            },
-            {
-                "pagePath": "pages/my/my",
-                "text": "我的",
-                "iconPath": "/images/myOn.png",
-                "selectedIconPath": "/images/my.png"
-            }
-        ]
-    },
-    "lazyCodeLoading": "requiredComponents",
-    "sitemapLocation": "sitemap.json",
-    "style": "v2"
+  "pages": [
+    "pages/discovery/daily/daily",
+    "pages/home/home",
+    "pages/my/my",
+    "pages/course/details",
+    "pages/discovery/discovery",
+    "pages/my/fans/fans"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "校园助手开发版",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "color": "#555555",
+    "selectedColor": "#0000FF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/home-1.png",
+        "selectedIconPath": "/images/home.png"
+      },
+      {
+        "pagePath": "pages/discovery/discovery",
+        "text": "社区",
+        "iconPath": "/images/zhuye1.png",
+        "selectedIconPath": "/images/zhuye.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/myOn.png",
+        "selectedIconPath": "/images/my.png"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
 }

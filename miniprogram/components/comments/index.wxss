@@ -91,7 +91,7 @@
   padding-bottom: env(safe-area-inset-bottom);
   background-color:#fff;
   transition: all .3 ease-in;
-  z-index: 1000;
+  z-index: 800;
 }
 .input-box{
   display: flex;
@@ -99,13 +99,14 @@
   align-items:center;
   width: 85%;
   padding:0 10px;
-  margin: 6px auto 0 5%;
+  margin: 6px 0 0 5%;
   background-color: rgb(245, 245, 245);
-  transition: all .5 ease;
   border-radius: 30rpx;
+  animation: showON .3s ease-out;
 }
 .show{
   width: 75%;
+  animation: show .3s ease-out;
 }
 .c-input{
   width: 100%;
@@ -115,10 +116,14 @@
   font-size: 30px;
 }
 .send{
+  position: absolute;
+  right: 0;
+  z-index: 802;
   color: #165DFF;
+  padding-left:10px;
   margin: 6px 5% 0 0;
   font-size: 28px;
-  animation: cread .1s ease-out;
+  animation: cread .2s ease-in-out;
 }
 .input-place{
   color: #cecece;
@@ -131,5 +136,24 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    width: 85%;
+  }
+  10% {
+    width: 80%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes showON {
+  0% {
+    width: 75%;
+  }
+  100% {
+    width: 85%;
   }
 }

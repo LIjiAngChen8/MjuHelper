@@ -71,7 +71,7 @@
       <view class="userinfo">
         <image src="{{item.avatar}}" alt="" class="user-avatar" mode="heightFix"/>
         <text class="user-name ellipsis">{{item.nickName}}</text>
-        <image class="likeimg" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/af39d285-c4b5-4a80-98b6-326545621317.png" mode="heightFix"/>
+        <view class="mjuicon icon-aixin"></view>
         <text class="likeNum ellipsis">{{ljc.ChangeLikeNum(item.likeNumber)}}</text>
       </view>
     </view>

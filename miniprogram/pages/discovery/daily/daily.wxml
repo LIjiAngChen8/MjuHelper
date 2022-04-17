@@ -1,2 +1,31 @@
-<!--pages/discovery/daily/daily.wxml-->
-<text>pages/discovery/daily/daily.wxml</text>
+<view class="daily-content">
+  <view class="daily-info">
+    <image class="l-avatar" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/bbb61219-6434-421d-885f-156c85e5ada5.jpg"></image>
+    <view class="send-name">李江辰</view>
+    <view class="d-attention">关注</view>
+  </view>
+  <view class="d-content-box">
+    <view class="content-title">假期OOTD｜卧室分享</view>
+    <view class="content-text">在成为任何角色之前 我先成为我自己</view>
+  </view>
+  <view class="daily-time">04-10</view>
+</view>
+<swiper
+  style="height:{{swiperHeight}}px;"
+  indicator-dots="true"
+  circular="true"
+  indicator-color="#E8F3FF"
+  indicator-active-color="#165DFF"
+  easing-function="easeOutCubic"
+>
+  <swiper-item  class="daily-swiper" wx:for="{{bannerlist}}" wx:key="index">
+    <image class="daily-img" bindload="imageLoad" mode="widthFix" src="{{item}}"></image>
+  </swiper-item>
+</swiper>
+<!-- <view class="daily-footer">
+  <view class="mjuicon icon-aixin emoji"/>
+</view> -->
+<MjuTitle title="评论"></MjuTitle>
+<MjuComments commentList="{{commentList}}" bind:getCommment="getCommment"></MjuComments>
+
+

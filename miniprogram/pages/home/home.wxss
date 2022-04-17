@@ -202,10 +202,6 @@ overflow: hidden;
   width: 0;
   border-radius: 50%;
 }
-.likeimg{
-  height: 60%;
-  margin-right: 3px;
-}
 .likeNum{
   font-size: x-small;
 }

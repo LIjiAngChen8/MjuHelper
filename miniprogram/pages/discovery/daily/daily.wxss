@@ -1,1 +1,84 @@
-/* pages/discovery/daily/daily.wxss */
+page{
+  background-color: #fff;
+}
+.daily-content{
+  width: 90%;
+  margin:0 auto;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.daily-info{
+  display: flex;
+  align-content: center;
+  height: 88rpx;
+  position: relative;
+}
+.send-name{
+  font-weight: 500;
+  margin-left: 15rpx;
+  line-height: 88rpx;
+}
+.d-attention{
+  position: absolute;
+  right: 0;
+  bottom: 15rpx;
+  font-size: small;
+  color: #fff;
+  background-color: #165DFF;
+  border-radius: 24rpx;
+  padding: 5rpx 20rpx;
+}
+.d-content-box{
+  margin-top: 24rpx;
+}
+.content-title{
+  font-weight: 600;
+}
+.content-text{
+  margin-top: 10rpx;
+  font-size:32rpx;
+  color: rgb(48, 48, 48);
+}
+.daily-time{
+  margin-top: 10px;
+  font-size: 9px;
+  line-height: 9px;
+  color: #999;
+}
+.daily-swiper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.daily-img{
+  width: 100%;
+  margin-bottom: 80rpx;
+}
+.daily-footer{
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  z-index: 801;
+  height: 75rpx;
+  display: flex;
+  justify-content:end;
+  align-items: center;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.emoji{
+  font-size: 30px;
+}
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: -16rpx;
+}
+.wx-swiper-dots .wx-swiper-dot { 
+width: 10rpx;
+height: 10rpx;
+margin: 0 5rpx;
+}
+.wx-swiper-dots .wx-swiper-dot.wx-swiper-dot-active {
+  width: 16rpx;
+  border-radius: 10rpx;
+}

@@ -5,6 +5,11 @@
   width: 110rpx;
   border-radius: 50%;
 }
+.l-avatar{
+  height: 88rpx;
+  width: 88rpx;
+  border-radius: 50%;
+}
 .flex{
   display: flex;
 }

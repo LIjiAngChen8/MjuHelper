@@ -27,7 +27,7 @@
     <view class="more-replies" wx:if="{{item.children.length>1}}" bindtap="showMore">展开{{item.children.length-1}}条回复</view>
 </view>
 <view class="c-footer"></view>
-<view class="comment-input" style="bottom:{{bottom + 'px'}}{{bottom !==0?';padding-bottom:10px':''}};transition: all .6 ease">
+<view class="comment-input" style="bottom:{{bottom + 'px'}}{{bottom !==0?';padding-bottom:10px':''}}">
   <view class="input-box{{inputKey?' show':''}}">
     <input class="c-input"
       type="text" 

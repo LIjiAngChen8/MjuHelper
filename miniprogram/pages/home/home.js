@@ -1,5 +1,6 @@
-// pages/home/home.js
-const LJCgetdate = require('../../util/GetDate.js');
+const db = wx.cloud.database();
+const _ = db.command
+// const LJCgetdate = require('../../util/GetDate.js');
 const app = getApp();
 const statusBarHeight = app.globalData.statusBarHeight;
 const navigationBarHeight = (app.globalData.navigationBarHeight);
@@ -337,8 +338,33 @@ Page({
       url: '../discovery/daily/daily?id='+detailId,
     })
   },
+  getLikes(uid){
+    db.collection('likes').where({uid}).field({
+      _id:false,
+      likeData:true
+    }).get().then(res => {
+      console.log('获取服务器点赞列表')
+      wx.setStorage({
+        key:"likes",
+        data:res.data[0].likeData||[]
+      })
+    })
+  },
+  getCollects(uid){
+    db.collection('collects').where({uid}).field({
+      _id:false,
+      articleData:true
+    }).get().then(res => {
+      console.log('获取服务器收藏列表')
+      wx.setStorage({
+        key:"collects",
+        data:res.data[0].articleData
+      })
+    })
+  },
   onLoad: function (options) {
       this.changetime(0)
-      console.log(this.data.timeindex)
+      this.getLikes('d2fe6f206258023a06ba281d4a217500')
+      this.getCollects('d2fe6f206258023a06ba281d4a217500')
   }
 })

@@ -17,6 +17,7 @@
   margin:0 10px 0 5px;
   font-size: 28rpx;
   font-weight: 500;
+  transition: width .9 ease-in;
 }
 @keyframes cread {
   0% {

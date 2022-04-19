@@ -61,6 +61,7 @@ Component({
                 articleData: _.pop([this.properties.docId]),
               },
             });
+          this.pop()
         } else {
           db.collection("collects")
             .where({
@@ -70,7 +71,9 @@ Component({
               data: {
                 articleData: _.unshift([this.properties.docId]),
               },
+
             });
+            this.add()
         }
         this.setData({
           collectNum: this.data.collectNum + num,
@@ -78,5 +81,22 @@ Component({
         });
       }
     }, 600),
+    add(){
+      console.log('运行')
+      var collects=wx.getStorageSync('collects')||[]
+      var a=[this.properties.docId]
+      wx.setStorageSync('collects',a.concat(collects))
+    },
+    pop(){
+      var collects=wx.getStorageSync('collects')||[]
+      var index =collects.indexOf(this.properties.docId)
+      let arrays = []
+      for (var i = 0; i< collects.length; i++) {
+        if (i != index) {
+          arrays.push(collects[i])
+        }
+      }
+      wx.setStorageSync('collects', arrays)
+    }
   },
 });

@@ -12,57 +12,38 @@ Page({
   onLoad: function (options) {
     this.getCommment('course00001')
     this.setData({
-      docId:'bb4c2515625c0ef300404c9d1815d76e'
+      docId:options.id
     })
-    // this.getDetails(options.id)
-    this.getDetails('bb4c2515625c0ef300404c9d1815d76e')
+    this.getDetails(options.id)
     wx.setNavigationBarTitle({ title: '' });
-    try {
-      var value = wx.getStorageSync('likes')
-      if (value) {
-        value.forEach(item => {
-          if(item===this.data.docId){
-            this.setData({
-              hasLike:true
-            })
-          }
-        });
-      }else{
-        db.collection('likes').where({uid:'d2fe6f206258023a06ba281d4a217500'}).field({
-          _id:false,
-          likeData:true
-        }).get().then(res => {
-          console.log('获取服务器点赞列表')
-          wx.setStorage({
-            key:"likes",
-            data:res.data[0].likeData
+    this.isHasCollect()//判断是否收藏
+    this.isHasLike()//判断是否喜欢
+  },
+  isHasCollect(){
+    var value = wx.getStorageSync('collects')
+    console.log('收藏：', value)
+    if (value) {
+      value.forEach(item => {
+        if(item===this.data.docId){
+          this.setData({
+            hasCollect:true
           })
-        })
-      }
-    } catch (e) {}
-    try {
-      var value = wx.getStorageSync('collect')
-      if (value) {
-        value.forEach(item => {
-          if(item===this.data.docId){
-            this.setData({
-              hasCollect:true
-            })
-          }
-        });
-      }else{
-        db.collection('collects').where({uid:'d2fe6f206258023a06ba281d4a217500'}).field({
-          _id:false,
-          articleData:true
-        }).get().then(res => {
-          console.log('获取服务器收藏列表')
-          wx.setStorage({
-            key:"collect",
-            data:res.data[0].articleData
+        }
+      });
+    }
+  },
+  isHasLike(){
+    var value = wx.getStorageSync('likes')
+    console.log('喜欢：', value)
+    if (value) {
+      value.forEach(item => {
+        if(item===this.data.docId){
+          this.setData({
+            hasLike:true
           })
-        })
-      }
-    } catch (e) {}
+        }
+      });
+    }
   },
   getDetails(id){
     wx.cloud

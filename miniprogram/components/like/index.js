@@ -58,6 +58,7 @@ Component({
                 likeData: _.pop([this.properties.docId]),
               },
             });
+            this.pop()
         } else {
           db.collection("likes")
             .where({
@@ -68,6 +69,7 @@ Component({
                 likeData: _.unshift([this.properties.docId]),
               },
             });
+            this.add()
         }
         this.setData({
           likeNum: this.data.likeNum + num,
@@ -75,5 +77,21 @@ Component({
         });
       }
     }, 600),
+    add(){
+      var likes=wx.getStorageSync('likes')||[]
+      var a=[this.properties.docId]
+      wx.setStorageSync('likes',a.concat(likes))
+    },
+    pop(){
+      var likes=wx.getStorageSync('likes')||[]
+      var index =likes.indexOf(this.properties.docId)
+      let arrays = []
+      for (var i = 0; i< likes.length; i++) {
+        if (i != index) {
+          arrays.push(likes[i])
+        }
+      }
+      wx.setStorageSync('likes', arrays)
+    }
   },
 });

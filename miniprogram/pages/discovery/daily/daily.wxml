@@ -5,10 +5,9 @@
     <view class="d-attention">关注</view>
   </view>
   <view class="d-content-box">
-    <view class="content-title">假期OOTD｜卧室分享</view>
-    <view class="content-text">在成为任何角色之前 我先成为我自己</view>
+    <view class="content-title">{{details.title}}</view>
+    <view class="content-text">{{details.content}}</view>
   </view>
-  <view class="daily-time">04-10</view>
 </view>
 <swiper
   style="height:{{swiperHeight}}px;"
@@ -18,14 +17,21 @@
   indicator-active-color="#165DFF"
   easing-function="easeOutCubic"
 >
-  <swiper-item  class="daily-swiper" wx:for="{{bannerlist}}" wx:key="index">
+  <swiper-item  class="daily-swiper" wx:for="{{details.imgList}}" wx:key="index">
     <image class="daily-img" bindload="imageLoad" mode="widthFix" src="{{item}}"></image>
   </swiper-item>
 </swiper>
-<!-- <view class="daily-footer">
-  <view class="mjuicon icon-aixin emoji"/>
-</view> -->
+<view class="daily-time">{{util.formatTime(details.time)}}</view>
+<view class="mju-divider"></view>
 <MjuTitle title="评论"></MjuTitle>
-<MjuComments commentList="{{commentList}}" bind:getCommment="getCommment"></MjuComments>
+<MjuComments isShort="{{true}}" commentList="{{commentList}}" bind:getCommment="getCommment"></MjuComments>
+<view class="daily-footer">
+  <view class="like-box">
+    <Like isLike="{{hasLike}}" num="{{details.likeNum}}" docId="{{docId}}"></Like>
+    <Collect isCollect="{{hasCollect}}" num="{{details.collectNum}}" docId="{{docId}}"></Collect>
+  </view>
+</view>
+<wxs module="util" src="../../../util/index.wxs"></wxs>
+
 
 

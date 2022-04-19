@@ -5,7 +5,6 @@ page{
   width: 90%;
   margin:0 auto;
   padding-bottom: 20rpx;
-  border-bottom: 1px solid #eeeeee;
 }
 .daily-info{
   display: flex;
@@ -40,7 +39,7 @@ page{
   color: rgb(48, 48, 48);
 }
 .daily-time{
-  margin-top: 10px;
+  margin:10px 0 0 5%;
   font-size: 9px;
   line-height: 9px;
   color: #999;
@@ -58,17 +57,39 @@ page{
 .daily-footer{
   position: fixed;
   bottom: 0;
-  right: 5%;
-  z-index: 801;
-  height: 75rpx;
-  display: flex;
-  justify-content:end;
-  align-items: center;
+  right: 0;
+  z-index: 860;
+  padding-right: 5%;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
 }
+.like-box{
+  pointer-events:auto;
+  display: flex;
+  align-items: center;
+  padding:0 10px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 30rpx;
+}
 .emoji{
-  font-size: 30px;
+  font-size: 28px;
+}
+.emoji1{
+  padding-bottom: 4px;
+  font-size: 23px;
+  color: #165DFF;
+}
+.like-num{
+  margin:0 10px 0 5px;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.mju-divider{
+  position: relative;
+  clear: both;
+  width: 90%;
+  margin:10px auto;
+  border-bottom: 1px solid #eeeeee;
 }
 .wx-swiper-dots.wx-swiper-dots-horizontal {
   margin-bottom: -16rpx;

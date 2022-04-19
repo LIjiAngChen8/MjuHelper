@@ -1,0 +1,5 @@
+<view class="collect" bindtap="changeState">
+  <view wx:if="{{isShow}}" class="mjuicon icon-shoucang oncollect"/>
+  <view wx:else class="mjuicon icon-shoucang1 offcollect"/>
+  <view class="collect-num">{{collectNum}}</view>
+</view>

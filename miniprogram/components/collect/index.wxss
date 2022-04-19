@@ -1,0 +1,30 @@
+.collect{
+  display: flex;
+  align-items: center;
+}
+.oncollect{
+  font-size: 21px;
+  color: #165DFF;
+  margin-bottom: 3px;
+  animation: cread .2s ease-in-out;
+}
+.offcollect{
+  font-size: 22px;
+  margin-bottom: 3px;
+  animation: cread .2s ease-in-out;
+}
+.collect-num{
+  margin:0 10px 0 5px;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+@keyframes cread {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

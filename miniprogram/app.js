@@ -15,7 +15,6 @@ App({
     }
     this.topBarHeight();
   },
-  
   topBarHeight(){
     var {top,height} = wx.getMenuButtonBoundingClientRect(); //胶囊按钮的位置
     var statusH = wx.getSystemInfoSync()['statusBarHeight']; //状态栏的位置

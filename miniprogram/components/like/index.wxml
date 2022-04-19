@@ -1,0 +1,5 @@
+<view class="like" bindtap="changeState">
+  <view wx:if="{{isShow}}" class="mjuicon icon-aixin1 onlike"/>
+  <view wx:else class="mjuicon icon-aixin offlike"/>
+  <view class="like-num">{{likeNum}}</view>
+</view>

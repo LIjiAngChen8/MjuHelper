@@ -1,8 +1,8 @@
 @font-face {
   font-family: "mjuicon"; /* Project id 2972866 */
-  src: url('//at.alicdn.com/t/font_2972866_qifyu40qhc.woff2?t=1650099866509') format('woff2'),
-       url('//at.alicdn.com/t/font_2972866_qifyu40qhc.woff?t=1650099866509') format('woff'),
-       url('//at.alicdn.com/t/font_2972866_qifyu40qhc.ttf?t=1650099866509') format('truetype');
+  src: url('//at.alicdn.com/t/font_2972866_5yish4czxwx.woff2?t=1650187643651') format('woff2'),
+       url('//at.alicdn.com/t/font_2972866_5yish4czxwx.woff?t=1650187643651') format('woff'),
+       url('//at.alicdn.com/t/font_2972866_5yish4czxwx.ttf?t=1650187643651') format('truetype');
 }
 
 .mjuicon {
@@ -11,6 +11,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shoucang:before {
+  content: "\e646";
+}
+
+.icon-shoucang1:before {
+  content: "\e60f";
 }
 
 .icon-aixin:before {

@@ -66,7 +66,7 @@
   <view class="title" style="margin-top: 5px;margin-bottom: 5px;">推荐</view>
   <scroll-view style="height:440rpx;" class="bookscroll" scroll-x="true" enable-flex="true" scroll-with-animation='true'>
     <view class="note" wx:for="{{recommend}}" wx:key="key">
-      <image class="note-img" src="{{item.img}}" mode='widthFix' bindtap="toDaily"></image>
+      <image class="note-img" src="{{item.img}}" mode='widthFix' bindtap="toDaily" data-id="{{item.detailsId}}"></image>
       <text class="note-text">{{item.text}}</text>
       <view class="userinfo">
         <image src="{{item.avatar}}" alt="" class="user-avatar" mode="heightFix"/>

@@ -176,6 +176,7 @@ Page({
     ],
     recommend:[
 {
+  detailsId:'bb4c2515625c0ef300404c9d1815d76e',
   avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/211647419727_.pic.jpg',
   img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/151647419123_.pic.jpg',
   nickName:'Xiao晓',
@@ -184,6 +185,7 @@ Page({
   text:'收到闽江学院录取通知书啦！'
 },
 {
+  detailsId:'5464a294625c09e30092d7f860a95446',
   avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/221647419737_.pic.jpg',
   img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/141647419123_.pic.jpg',
   nickName:'懒人LeE',
@@ -192,6 +194,7 @@ Page({
   text:'食堂的饭！！'
 },
 {
+  detailsId:'bb4c2515625c0ef300404c9d1815d76e',
   avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/201647419717_.pic.jpg',
   img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/181647419124_.pic_hd.jpg',
   nickName:'Yoohoow',
@@ -200,6 +203,7 @@ Page({
   text:'福州地铁|纯欲☁️奶里奶气穿搭之宿舍对镜自拍'
 },
 {
+  detailsId:'bb4c2515625c0ef300404c9d1815d76e',
   avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/191647419705_.pic.jpg',
   img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/161647419123_.pic.jpg',
   nickName:'别烦我',
@@ -208,6 +212,7 @@ Page({
   text:'真的很绝！'
 },
 {
+  detailsId:'5464a294625c09e30092d7f860a95446',
   avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/231647419955_.pic.jpg',
   img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/181647419124_.pic_hd.jpg',
   nickName:'奶黄包',
@@ -216,6 +221,7 @@ Page({
   text:'真的很绝！'
 },
 {
+  detailsId:'bb4c2515625c0ef300404c9d1815d76e',
   avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/231647419955_.pic.jpg',
   img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/121647418688_.pic.jpg',
   nickName:'不知名网友',
@@ -325,9 +331,10 @@ Page({
     })
   },
   //进入生活日常(daily)详情页
-  toDaily(){
+  toDaily(e){
+    let detailId=e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../discovery/daily/daily',
+      url: '../discovery/daily/daily?id='+detailId,
     })
   },
   onLoad: function (options) {

@@ -1,80 +1,80 @@
 {
-    "miniprogramRoot": "miniprogram/",
-    "cloudfunctionRoot": "cloudfunctions/",
-    "setting": {
-        "urlCheck": false,
-        "es6": true,
-        "enhance": true,
-        "postcss": true,
-        "preloadBackgroundData": false,
-        "minified": true,
-        "newFeature": true,
-        "coverView": true,
-        "nodeModules": false,
-        "autoAudits": false,
-        "showShadowRootInWxmlPanel": true,
-        "scopeDataCheck": false,
-        "uglifyFileName": false,
-        "checkInvalidKey": true,
-        "checkSiteMap": false,
-        "uploadWithSourceMap": true,
-        "compileHotReLoad": false,
-        "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": true,
-        "useApiHook": true,
-        "useApiHostProcess": true,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
-        },
-        "useIsolateContext": false,
-        "userConfirmedBundleSwitch": false,
-        "packNpmManually": false,
-        "packNpmRelationList": [],
-        "minifyWXSS": true,
-        "disableUseStrict": false,
-        "minifyWXML": true,
-        "showES6CompileOption": false,
-        "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": false,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
-    "appid": "wx654aa6893474a360",
-    "projectname": "MjuHelper",
-    "libVersion": "2.19.1",
-    "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
-    "compileType": "miniprogram",
-    "srcMiniprogramRoot": "miniprogram/",
-    "packOptions": {
-        "ignore": [],
-        "include": []
+    "useIsolateContext": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": true
+  },
+  "appid": "wx654aa6893474a360",
+  "projectname": "MjuHelper",
+  "libVersion": "2.23.4",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+  "compileType": "miniprogram",
+  "srcMiniprogramRoot": "miniprogram/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 4
+  },
+  "description": "李江辰开发",
+  "condition": {
+    "search": {
+      "list": []
     },
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
+    "conversation": {
+      "list": []
     },
-    "description": "李江辰开发",
-    "condition": {
-        "search": {
-            "list": []
-        },
-        "conversation": {
-            "list": []
-        },
-        "plugin": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": [
-                {
-                    "id": -1,
-                    "name": "db guide",
-                    "pathName": "pages/databaseGuide/databaseGuide"
-                }
-            ]
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide"
         }
+      ]
     }
+  }
 }

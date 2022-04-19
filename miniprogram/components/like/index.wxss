@@ -1,0 +1,29 @@
+.like{
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+}
+.onlike{
+  font-size: 28px;
+  color: #165DFF;
+  animation: cread .2s ease-in-out;
+}
+.offlike{
+  font-size: 28px;
+  animation: cread .2s ease-in-out;
+}
+.like-num{
+  margin:0 10px 0 5px;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+@keyframes cread {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -29,18 +29,22 @@
 <view class="c-footer"></view>
 <view class="comment-input" style="bottom:{{bottom + 'px'}}{{bottom !==0?';padding-bottom:10px':''}}">
   <view class="input-box{{inputKey?' show':''}}">
-    <input class="c-input"
+    <textarea
+      style="width: {{short?'50%':'90%'}};max-height: 160rpx;caret-color: #165DFF;"
       type="text" 
       confirm-type="发送"
+      auto-height="{{true}}"
       focus="{{focus}}"
       adjust-position="{{false}}"
+      show-confirm-bar="{{false}}"
       placeholder-class="input-place"
       placeholder="{{tips}}"
       bindfocus="focus"
       bindconfirm="sendComment"
       bindblur="blur"
       bindtap="focus1"
-      bindinput="getInput" value="{{inputKey}}"/>
+      bindinput="getInput" value="{{inputKey}}">
+      </textarea>
       <view class="mjuicon icon-smile emoji"/>
   </view>
   <view wx:if="{{inputKey}}" class="mjuicon icon-shangxiang send" bindtap="sendComment"/>

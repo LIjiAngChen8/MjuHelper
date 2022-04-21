@@ -362,8 +362,20 @@ Page({
       })
     })
   },
+  //获取推送文章
+  getPush(){
+    wx.cloud
+      .callFunction({name: "getPushArticle"})
+      .then((res) => {
+        console.log(res)
+        // this.setData({
+        //   details: res.result.list[0],
+        // });
+    })
+  },
   onLoad: function (options) {
       this.changetime(0)
+      this.getPush()
       this.getLikes('d2fe6f206258023a06ba281d4a217500')
       this.getCollects('d2fe6f206258023a06ba281d4a217500')
   }

@@ -82,7 +82,6 @@ Component({
       }
     }, 600),
     add(){
-      console.log('运行')
       var collects=wx.getStorageSync('collects')||[]
       var a=[this.properties.docId]
       wx.setStorageSync('collects',a.concat(collects))

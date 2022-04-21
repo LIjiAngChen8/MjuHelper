@@ -39,40 +39,18 @@
   </scroll-view>
 </view>
 <!-- 翻页书本 -->
-<scroll-view class="bookscroll" scroll-x="true" enable-flex="true" scroll-with-animation='true'>
-  <view class="book_item" wx:for="{{booklist}}" wx:key="bookkey" wx:for-item="bookItme">
-    <view class="book">
-      <view class="frist-page">
-        <image mode="widthFix" src="{{bookItme.bookurl}}"></image>
-      </view>
-      <view class="inside-page"></view>
-      <view class="inside-page"></view>
-      <view class="inside-page"></view>
-      <view class="inside-page"></view>
-      <view class="bookpage" bindtap="toBookDetails" data-course="{{bookItme}}">
-        <text class="book-text1">{{bookItme.book}}</text>
-        <text class="book-text2">{{bookItme.teacher}}</text>
-        <text class="book-text3">{{bookItme.time}}节</text>
-        <text class="book-text4">{{bookItme.address}}</text>
-      </view>
-      <view class="end-page">
-        <image class="bookend" style="width: 150rpx;" mode="widthFix" src="{{bookItme.bookurl}}"></image>
-      </view>
-    </view>
-  </view>
-</scroll-view>
+<Book bookData="{{booklist}}" bind:toBookDetails="toBookDetails"></Book>
 <!-- 推荐栏 -->
 <view class="recommend">
   <view class="title" style="margin-top: 5px;margin-bottom: 5px;">推荐</view>
-  <scroll-view style="height:440rpx;" class="bookscroll" scroll-x="true" enable-flex="true" scroll-with-animation='true'>
-    <view class="note" wx:for="{{recommend}}" wx:key="key">
-      <image class="note-img" src="{{item.img}}" mode='widthFix' bindtap="toDaily" data-id="{{item.detailsId}}"></image>
-      <text class="note-text">{{item.text}}</text>
+  <scroll-view style="height:430rpx;" class="bookscroll" scroll-x="true" enable-flex="true" scroll-with-animation='true'>
+    <view class="note" wx:for="{{articles}}" wx:key="key">
+      <image class="note-img" src="{{item.coverUrl}}" mode="widthFix"  bindtap="toDaily" data-id="{{item._id}}"></image>
+      <text class="note-text">{{item.title}}</text>
       <view class="userinfo">
-        <image src="{{item.avatar}}" alt="" class="user-avatar" mode="heightFix"/>
+        <image src="{{item.avatar}}" class="users-avatar" mode="widthFix"/>
         <text class="user-name ellipsis">{{item.nickName}}</text>
-        <view class="mjuicon icon-aixin"></view>
-        <text class="likeNum ellipsis">{{ljc.ChangeLikeNum(item.likeNumber)}}</text>
+        <Like isLike="{{true}}" num="{{item.likeNum}}" docId="{{item._id}}" iconSize="20" fontSize="24"></Like>
       </view>
     </view>
   </scroll-view>
@@ -83,15 +61,3 @@
     <image src="{{item.url}}" style="width:100%; " mode="widthFix" />
   </swiper-item>
 </swiper>
-<wxs module="ljc">
-function likeNum(num) {
-    if (num > 9999 && num <= 99999) {
-        num = parseInt(num / 10000);
-        num = parseInt(num) + "万";
-    }
-    return num;
-}
-module.exports = {
-  ChangeLikeNum: likeNum,
-};
- </wxs>

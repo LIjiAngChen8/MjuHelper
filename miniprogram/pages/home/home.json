@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "Book":"./book/index",
+    "Like":"../../components/like/index"
+  },
   "navigationStyle": "custom"
 }

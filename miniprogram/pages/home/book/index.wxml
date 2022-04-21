@@ -1,0 +1,22 @@
+<scroll-view class="bookscroll" scroll-x="true" enable-flex="true" scroll-with-animation='true'>
+  <view class="book_item" wx:for="{{bookData}}" wx:key="bookkey" wx:for-item="bookItme">
+    <view class="book">
+      <view class="frist-page">
+        <image mode="widthFix" src="{{bookItme.bookurl}}"></image>
+      </view>
+      <view class="inside-page"></view>
+      <view class="inside-page"></view>
+      <view class="inside-page"></view>
+      <view class="inside-page"></view>
+      <view class="bookpage" bindtap="clikBook" data-_id="{{bookItme.courseID}}">
+        <text class="book-text1">{{bookItme.book}}</text>
+        <text class="book-text2">{{bookItme.teacher}}</text>
+        <text class="book-text3">{{bookItme.time}}节</text>
+        <text class="book-text4">{{bookItme.address}}</text>
+      </view>
+      <view class="end-page">
+        <image class="bookend" style="width: 150rpx;" mode="widthFix" src="{{bookItme.bookurl}}"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>

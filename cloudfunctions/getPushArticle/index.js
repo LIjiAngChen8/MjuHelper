@@ -9,7 +9,7 @@ exports.main = async (event, context) => {
     .collection("article")
     .aggregate()
     .sample({
-      size: 2
+      size: 6
     })
     .lookup({
       from: "user",
@@ -20,15 +20,23 @@ exports.main = async (event, context) => {
     .replaceRoot({
       newRoot: $.mergeObjects([$.arrayElemAt(["$userInfo", 0]), "$$ROOT"]),
     })
+    .addFields({
+      coverUrl: $.arrayElemAt(['$imgList', 0])
+    })
     .project({
+      imgList:0,
       userInfo: 0,
+      content: 0,
+      collectNum: 0,
+      from: 0,
+      time: 0,
     })
     .end({
       success: function (res) {
-        return res.list;
+        return res;
       },
       fail(error) {
-        return 'error';
+        return error;
       },
     });
 };

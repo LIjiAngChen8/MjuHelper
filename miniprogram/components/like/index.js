@@ -17,6 +17,14 @@ Component({
     docId:{
       type:String,
       value:''
+    },
+    fontSize:{
+      type:String,
+      value:28
+    },
+    iconSize:{
+      type:String,
+      value:28
     }
   },
   observers: {
@@ -72,7 +80,7 @@ Component({
             this.add()
         }
         this.setData({
-          likeNum: this.data.likeNum + num,
+          likeNum: parseInt(this.data.likeNum) + num,
           isShow: !this.data.isShow,
         });
       }

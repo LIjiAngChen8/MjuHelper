@@ -76,7 +76,7 @@ Component({
             this.add()
         }
         this.setData({
-          collectNum: this.data.collectNum + num,
+          collectNum: parseInt(this.data.collectNum) + num,
           isShow: !this.data.isShow,
         });
       }

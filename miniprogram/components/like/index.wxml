@@ -1,5 +1,22 @@
-<view class="like" bindtap="changeState">
-  <view wx:if="{{isShow}}" class="mjuicon icon-aixin1 onlike"/>
-  <view wx:else class="mjuicon icon-aixin offlike"/>
-  <view class="like-num">{{likeNum ||''}}</view>
+<view class="like" bindtap="changeState" style="font-size:{{iconSize}}px">
+  <view wx:if="{{isShow}}" class="mjuicon icon-aixin1 onlike" style="font-size:{{iconSize}}px"/>
+  <view wx:else class="mjuicon icon-aixin offlike" style="font-size:{{iconSize}}px"/>
+  <view class="like-num" style="font-size:{{fontSize}}rpx">{{ljc.ChangeLikeNum(likeNum) ||''}}</view>
 </view>
+<wxs module="ljc">
+function changeLike(num) {
+    if (num > 9999 && num <= 99999) {
+        // var qian = parseInt(num % 10000 / 1000);
+        num = parseInt(num % 100000 / 10000);
+        // if(qian<10 &&qian>0){
+        //   num = num+'.' +qian + "万";
+        // }else{
+          num = num + "万";
+        // }
+    }
+    return num;
+}
+module.exports = {
+  ChangeLikeNum: changeLike,
+};
+ </wxs>

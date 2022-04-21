@@ -175,62 +175,7 @@ Page({
         url:'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-efbfcb02-017d-4e68-a2c7-f92e33192dbb/fa83b5dc-cf16-4050-9e2c-7de7401e7181.jpg'
       },
     ],
-    recommend:[
-{
-  detailsId:'bb4c2515625c0ef300404c9d1815d76e',
-  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/211647419727_.pic.jpg',
-  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/151647419123_.pic.jpg',
-  nickName:'Xiao晓',
-  like:false,
-  likeNumber:162,
-  text:'收到闽江学院录取通知书啦！'
-},
-{
-  detailsId:'5464a294625c09e30092d7f860a95446',
-  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/221647419737_.pic.jpg',
-  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/141647419123_.pic.jpg',
-  nickName:'懒人LeE',
-  like:false,
-  likeNumber:555,
-  text:'食堂的饭！！'
-},
-{
-  detailsId:'bb4c2515625c0ef300404c9d1815d76e',
-  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/201647419717_.pic.jpg',
-  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/181647419124_.pic_hd.jpg',
-  nickName:'Yoohoow',
-  like:false,
-  likeNumber:35012,
-  text:'福州地铁|纯欲☁️奶里奶气穿搭之宿舍对镜自拍'
-},
-{
-  detailsId:'bb4c2515625c0ef300404c9d1815d76e',
-  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/191647419705_.pic.jpg',
-  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/161647419123_.pic.jpg',
-  nickName:'别烦我',
-  like:false,
-  likeNumber:9262,
-  text:'真的很绝！'
-},
-{
-  detailsId:'5464a294625c09e30092d7f860a95446',
-  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/231647419955_.pic.jpg',
-  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/181647419124_.pic_hd.jpg',
-  nickName:'奶黄包',
-  like:false,
-  likeNumber:10005,
-  text:'真的很绝！'
-},
-{
-  detailsId:'bb4c2515625c0ef300404c9d1815d76e',
-  avatar:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/aI/231647419955_.pic.jpg',
-  img:'cloud://mjuhelper-2glwz5lb310efc94.6d6a-mjuhelper-2glwz5lb310efc94-1258885867/recommend/121647418688_.pic.jpg',
-  nickName:'不知名网友',
-  like:false,
-  likeNumber:162,
-  text:'老师真好看！'
-},
-    ],
+    articles:wx.getStorageSync('PushArticle')||[],//推荐动态
     statusBarHeight: statusBarHeight + 'px',
     navigationBarHeight: navigationBarHeight + 'px',
     containerHeight: containerHeight + 'px',
@@ -326,9 +271,8 @@ Page({
   },
   //点击书本进入书本详情页
   toBookDetails(e){
-    let courseID=e.currentTarget.dataset.course.courseID
     wx.navigateTo({
-      url: '../course/details?courseID='+courseID
+      url: '../course/details?courseID='+e.detail.id
     })
   },
   //进入生活日常(daily)详情页
@@ -367,10 +311,13 @@ Page({
     wx.cloud
       .callFunction({name: "getPushArticle"})
       .then((res) => {
-        console.log(res)
-        // this.setData({
-        //   details: res.result.list[0],
-        // });
+        this.setData({
+          articles: res.result.list,
+        });
+        wx.setStorage({
+          key:"PushArticle",
+          data:res.result.list
+        })
     })
   },
   onLoad: function (options) {
